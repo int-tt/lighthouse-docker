@@ -1,7 +1,8 @@
-#lighthouse-docker
+# lighthouse-docker
 
 ## Usage
 
 ```
-$docker run -itv $PWD/report/:/home/chrome --cap-add=SYS_ADMIN lighthouse2 --chrome-flags="--headless --disable-gpu" https://google.com
+docker pull inttt/lighthouse
+$docker run -it -v $PWD/report/:/home/chrome/report --cap-add=SYS_ADMIN inttt/lighthouse --chrome-flags="--headless --disable-gpu" https://google.com
 ```
